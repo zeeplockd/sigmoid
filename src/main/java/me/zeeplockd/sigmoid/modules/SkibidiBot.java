@@ -44,9 +44,11 @@ public class SkibidiBot extends Module {
         } else if (rawMessage.contains(prefix + "commands")) {
             ChatUtils.sendPlayerMsg("Commands: commands, help, fuckoff, sex");
         } else if (rawMessage.contains(prefix + "fuckoff")) {
-            if (fuckOffEnabled.get() == true) {
+            if (fuckOffEnabled.get()) {
                 ChatUtils.sendPlayerMsg("If you insist... Jeez.");
-                mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(Text.literal("%s[%sSkibidiBot%s] %sSomebody told you to fuck off.".formatted(Formatting.GRAY, Formatting.BLUE, Formatting.GRAY, Formatting.WHITE))));
+                if (mc.player != null) {
+                    mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(Text.literal("%s[%sSkibidiBot%s] %sSomebody told you to fuck off.".formatted(Formatting.GRAY, Formatting.BLUE, Formatting.GRAY, Formatting.WHITE))));
+                }
             } else {
                 ChatUtils.sendPlayerMsg("Sorry! The fuckoff command is currently disabled. Beg me to enable it.");
             }
