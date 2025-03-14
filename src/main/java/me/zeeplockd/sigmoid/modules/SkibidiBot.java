@@ -10,10 +10,6 @@ import net.minecraft.network.packet.s2c.common.DisconnectS2CPacket;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
 public class SkibidiBot extends Module {
     private final SettingGroup sgGeneral = this.settings.getDefaultGroup();
 
@@ -42,7 +38,7 @@ public class SkibidiBot extends Module {
         if (rawMessage.contains(prefix + "help")) {
             ChatUtils.sendPlayerMsg("Hello! This is SkibidiBot, the chatbot built into Sigmoid, a meteor client addon made by zeeplockd. Run 'commands' to get a list of commands.");
         } else if (rawMessage.contains(prefix + "commands")) {
-            ChatUtils.sendPlayerMsg("Commands: commands, help, fuckoff, sex");
+            ChatUtils.sendPlayerMsg("Commands: commands, help, fuckoff");
         } else if (rawMessage.contains(prefix + "fuckoff")) {
             if (fuckOffEnabled.get()) {
                 ChatUtils.sendPlayerMsg("If you insist... Jeez.");
@@ -52,11 +48,6 @@ public class SkibidiBot extends Module {
             } else {
                 ChatUtils.sendPlayerMsg("Sorry! The fuckoff command is currently disabled. Beg me to enable it.");
             }
-        } else if (rawMessage.contains(prefix + "sex")) {
-            List<String> strings = Arrays.asList("Nya~~", "Ohh~~", "Harder daddy~~", "I'm go- gonna.. AHH~~", "I love this~~");
-            Random random = new Random();
-            String randomString = strings.get(random.nextInt(strings.size()));
-            ChatUtils.sendPlayerMsg(randomString);
         }
     }
 }

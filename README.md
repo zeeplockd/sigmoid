@@ -2,6 +2,7 @@
 
 Very skibidi addon for Meteor Client.
 
-## License
+## Credits
 
-All Rights Reserved. No funny business now!
+Killet, Laztec and Ionar for the trident dupe. [Here](github.com/Killetx/TridentDupe)
+zeeplockd for everything else

@@ -2,6 +2,7 @@ package me.zeeplockd.sigmoid;
 
 import me.zeeplockd.sigmoid.modules.SkibidiBot;
 import com.mojang.logging.LogUtils;
+import me.zeeplockd.sigmoid.modules.TridentDupe;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Category;
@@ -18,6 +19,7 @@ public class Sigmoid extends MeteorAddon {
 
         // Modules
         Modules.get().add(new SkibidiBot());
+        Modules.get().add(new TridentDupe());
     }
 
     @Override
