@@ -6,4 +6,4 @@ Very skibidi addon for Meteor Client.
 
 Killet, Laztec and Ionar for the trident dupe. [Here](https://github.com/Killetx/TridentDupe)
 
-zeeplockd for everything else
+zeeplockd for everything else.
