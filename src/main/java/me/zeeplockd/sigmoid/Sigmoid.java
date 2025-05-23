@@ -1,8 +1,8 @@
 package me.zeeplockd.sigmoid;
 
-import me.zeeplockd.sigmoid.modules.SkibidiBot;
 import com.mojang.logging.LogUtils;
 import me.zeeplockd.sigmoid.modules.TridentDupe;
+import me.zeeplockd.sigmoid.modules.UkPubSimulator;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.modules.Category;
@@ -18,7 +18,7 @@ public class Sigmoid extends MeteorAddon {
         LOG.info("Initializing Sigmoid (zeeplockd was here :D)");
 
         // Modules
-        Modules.get().add(new SkibidiBot());
+        Modules.get().add(new UkPubSimulator());
         Modules.get().add(new TridentDupe());
     }
 
@@ -34,6 +34,6 @@ public class Sigmoid extends MeteorAddon {
 
     @Override
     public GithubRepo getRepo() {
-        return new GithubRepo("fenziie", "sigmoid");
+        return new GithubRepo("zeeplockd", "sigmoid");
     }
 }

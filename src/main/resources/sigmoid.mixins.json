@@ -3,7 +3,7 @@
   "package": "me.zeeplockd.sigmoid.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "ExampleMixin"
+    "ExampleMixinSigmoid"
   ],
   "injectors": {
     "defaultRequire": 1

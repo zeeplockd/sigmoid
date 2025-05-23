@@ -20,12 +20,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * </ul>
  */
 @Mixin(MinecraftClient.class)
-public abstract class ExampleMixin {
+public abstract class ExampleMixinSigmoid {
+    // reason it is called ExampleMixin*Sigmoid* is because an addon I have conflicts with it.
+
     /**
      * Example Mixin injection targeting the {@code <init>} method (the constructor) at {@code TAIL} (end of method).
      */
     @Inject(method = "<init>", at = @At("TAIL"))
     private void onGameLoaded(RunArgs args, CallbackInfo ci) {
-        Sigmoid.LOG.info("Hello from ExampleMixin!");
+        Sigmoid.LOG.info("Hello from ExampleMixinSigmoid!");
     }
 }
